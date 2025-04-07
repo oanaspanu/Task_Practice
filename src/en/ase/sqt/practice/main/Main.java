@@ -4,7 +4,9 @@ import en.ase.sqt.practice.GSM.ConnectionType;
 import en.ase.sqt.practice.GSM.GSMConnection;
 import en.ase.sqt.practice.GSM.GSMConnectionRegistry;
 import en.ase.sqt.practice.GSM.IGSMConnection;
-import en.ase.sqt.practice.OS;
+import en.ase.sqt.practice.OS.OS;
+import en.ase.sqt.practice.OS.OSRegistry;
+import en.ase.sqt.practice.OS.VersionType;
 import en.ase.sqt.practice.features.*;
 import en.ase.sqt.practice.phone.Phone;
 import en.ase.sqt.practice.phone.PhoneBuilder;
@@ -71,12 +73,17 @@ public class Main {
         System.out.println(myPhone2);
 
         System.out.println("\n--- Requirement 5 ---");
-        OS originalOS1 = new OS(1);
-        OS originalOS2 = new OS(2);
-
-        // Clone the OS without re-building
+        OS originalOS1 = new OS(10);
         OS clonedOS1 = (OS) originalOS1.clone();
-        OS clonedOS2 = (OS) originalOS2.clone();
+
+
+        System.out.println("\n--- Requirement 6 ---");
+        OS os1 = OSRegistry.getOS(VersionType.V1);
+        OS os2 = OSRegistry.getOS(VersionType.V2);
+        OS os3 = OSRegistry.getOS(VersionType.V3);
+        OS os4 = OSRegistry.getOS(VersionType.V3);
+        OS os5 = OSRegistry.getOS(VersionType.V3);
+        OS os6 = OSRegistry.getOS(VersionType.V3);
 
     }
 }

@@ -1,4 +1,4 @@
-package en.ase.sqt.practice;
+package en.ase.sqt.practice.OS;
 
 public class OS implements Cloneable{
     int version = 0;
