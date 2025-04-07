@@ -1,7 +1,16 @@
 package en.ase.sqt.practice.features;
 
-import en.ase.sqt.practice.AFeature;
-
 public class Compass extends AFeature {
-    public Compass() {}
+    public Compass(String name, int price) {
+        super(name, price);
+        System.out.println("Compass created!");
+    }
+
+    @Override
+    public String toString() {
+        return "Compass{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

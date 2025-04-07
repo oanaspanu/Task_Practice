@@ -1,14 +1,17 @@
 package en.ase.sqt.practice.features;
 
-public class Speaker extends AFeature {
-    public Speaker(String name, int price) {
-        super(name, price);
-        System.out.println("Speaker created!");
+public abstract class AFeature {
+    String name;
+    int price;
+
+    public AFeature(String name, int price) {
+        this.name = name;
+        this.price = price;
     }
 
     @Override
     public String toString() {
-        return "Speaker{" +
+        return "AFeature{" +
                 "name='" + name + '\'' +
                 ", price=" + price +
                 '}';

@@ -1,14 +1,12 @@
 package en.ase.sqt.practice.features;
 
-import en.ase.sqt.practice.AFeature;
-
 public class FeatureFactory {
-    public static AFeature create(FeatureType type) {
+    public static AFeature create(FeatureType type, String name, int price) {
         switch (type) {
-            case BATTERY: return new Battery();
-            case ANTENNA: return new Antenna();
-            case SPEAKER: return new Speaker();
-            case COMPASS: return new Compass();
+            case BATTERY: return new Battery(name, price);
+            case ANTENNA: return new Antenna(name, price);
+            case SPEAKER: return new Speaker(name, price);
+            case COMPASS: return new Compass(name, price);
             default: throw new UnsupportedOperationException();
         }
     }

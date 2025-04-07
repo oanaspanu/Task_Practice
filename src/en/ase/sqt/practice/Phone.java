@@ -1,5 +1,7 @@
 package en.ase.sqt.practice;
 
+import en.ase.sqt.practice.features.AFeature;
+
 import java.util.List;
 
 public class Phone {
@@ -12,5 +14,14 @@ public class Phone {
         this.identifier = identifier;
         this.version = version;
         this.features = features;
+    }
+
+    @Override
+    public String toString() {
+        return "Phone{" +
+                "identifier='" + identifier + '\'' +
+                ", version='" + version + '\'' +
+                ", features=" + features +
+                '}';
     }
 }

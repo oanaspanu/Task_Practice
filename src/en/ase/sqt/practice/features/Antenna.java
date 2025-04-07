@@ -1,7 +1,16 @@
 package en.ase.sqt.practice.features;
 
-import en.ase.sqt.practice.AFeature;
-
 public class Antenna extends AFeature {
-    public Antenna() {}
+    public Antenna(String name, int price) {
+        super(name, price);
+        System.out.println("Antenna created!");
+    }
+
+    @Override
+    public String toString() {
+        return "Antenna{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
