@@ -1,7 +1,7 @@
 package en.ase.sqt.practice.features;
 
 public class Battery extends AFeature {
-    public Battery(String name, int price) {
+    Battery(String name, int price) {
         super(name, price);
         System.out.println("Battery created!");
     }

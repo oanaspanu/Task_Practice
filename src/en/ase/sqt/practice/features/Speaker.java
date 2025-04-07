@@ -1,7 +1,7 @@
 package en.ase.sqt.practice.features;
 
 public class Speaker extends AFeature {
-    public Speaker(String name, int price) {
+    Speaker(String name, int price) {
         super(name, price);
         System.out.println("Speaker created!");
     }

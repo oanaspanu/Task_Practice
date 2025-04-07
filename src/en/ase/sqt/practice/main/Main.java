@@ -11,9 +11,12 @@ public class Main {
 
         System.out.println("\n--- Requirement 1 ---");
         // Create features using the Simple Factory
-        AFeature battery = FeatureFactory.create(FeatureType.BATTERY, "Battery1", 100);
-        AFeature speaker = FeatureFactory.create(FeatureType.SPEAKER,  "Speaker1", 100);
-        AFeature compass = FeatureFactory.create(FeatureType.COMPASS,  "Compass1", 100);
+        AFeature battery = FeatureFactory.createFeature(FeatureType.BATTERY, "Battery1", 100);
+        AFeature speaker = FeatureFactory.createFeature(FeatureType.SPEAKER,  "Speaker1", 100);
+        AFeature compass = FeatureFactory.createFeature(FeatureType.COMPASS,  "Compass1", 100);
+
+        //Package-private constructor
+        //Battery battery1 = new Battery("Battery", 100);
 
         // Add features to a list
         List<AFeature> features = new ArrayList<AFeature>();
