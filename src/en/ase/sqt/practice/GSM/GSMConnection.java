@@ -18,4 +18,5 @@ public class GSMConnection implements IGSMConnection {
     public void call() {
         System.out.println("GSM Connection call started.");
     }
+
 }
