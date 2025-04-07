@@ -1,6 +1,8 @@
 package en.ase.sqt.practice.main;
 
 import en.ase.sqt.practice.*;
+import en.ase.sqt.practice.GSM.GSMConnection;
+import en.ase.sqt.practice.GSM.IGSMConnection;
 import en.ase.sqt.practice.features.*;
 
 import java.util.ArrayList;
@@ -27,6 +29,16 @@ public class Main {
         // Create a phone with identifier and version
         Phone customPhone = new Phone("BrainX-3000", "v1.1", features);
         System.out.println(customPhone);
+
+
+
+        System.out.println("\n--- Requirement 2 ---");
+        IGSMConnection conn1 = GSMConnection.getInstance();
+        IGSMConnection conn2 = GSMConnection.getInstance();
+
+        conn1.call();
+
+        System.out.println("Are both connections the same? " + (conn1 == conn2));
 
     }
 }
