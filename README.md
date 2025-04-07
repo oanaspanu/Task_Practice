@@ -2,8 +2,8 @@ The not so distant land of ✨Brainrottingham✨is being considered to be added 
 
 Phone attributes (Mandatory):
 - String identifier
-- String version
-  Phone features/add-ons (Optional attributes of the class derived from AFeature)
+- String version 
+Phone features/add-ons (Optional attributes of the class derived from AFeature)
 - Battery
 - Antenna
 - Compass
