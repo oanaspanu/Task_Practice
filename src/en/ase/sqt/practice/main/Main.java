@@ -4,6 +4,7 @@ import en.ase.sqt.practice.GSM.ConnectionType;
 import en.ase.sqt.practice.GSM.GSMConnection;
 import en.ase.sqt.practice.GSM.GSMConnectionRegistry;
 import en.ase.sqt.practice.GSM.IGSMConnection;
+import en.ase.sqt.practice.OS;
 import en.ase.sqt.practice.features.*;
 import en.ase.sqt.practice.phone.Phone;
 import en.ase.sqt.practice.phone.PhoneBuilder;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException, CloneNotSupportedException {
 
         System.out.println("\n--- Requirement 1 ---");
         // Create features using the Simple Factory
@@ -68,6 +69,14 @@ public class Main {
 
         System.out.println(myPhone1);
         System.out.println(myPhone2);
+
+        System.out.println("\n--- Requirement 5 ---");
+        OS originalOS1 = new OS(1);
+        OS originalOS2 = new OS(2);
+
+        // Clone the OS without re-building
+        OS clonedOS1 = (OS) originalOS1.clone();
+        OS clonedOS2 = (OS) originalOS2.clone();
 
     }
 }
