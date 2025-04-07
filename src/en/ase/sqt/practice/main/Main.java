@@ -1,11 +1,12 @@
 package en.ase.sqt.practice.main;
 
-import en.ase.sqt.practice.*;
 import en.ase.sqt.practice.GSM.ConnectionType;
 import en.ase.sqt.practice.GSM.GSMConnection;
 import en.ase.sqt.practice.GSM.GSMConnectionRegistry;
 import en.ase.sqt.practice.GSM.IGSMConnection;
 import en.ase.sqt.practice.features.*;
+import en.ase.sqt.practice.phone.Phone;
+import en.ase.sqt.practice.phone.PhoneBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,18 +29,15 @@ public class Main {
         features.add(speaker);
         features.add(compass);
 
-        // Create a phone with identifier and version
-        Phone customPhone = new Phone("BrainX-3000", "v1.1", features);
-        System.out.println(customPhone);
-
+        // Create a phone with identifier and version - not working anymore bcs of the builder
+        //Phone customPhone = new Phone("BrainX-3000", "v1.1", features);
+        //System.out.println(customPhone);
 
 
         System.out.println("\n--- Requirement 2 ---");
         IGSMConnection conn1 = GSMConnection.getInstance();
         IGSMConnection conn2 = GSMConnection.getInstance();
-
         conn1.call();
-
         System.out.println("Are both connections the same? " + (conn1 == conn2));
 
 
@@ -55,5 +53,21 @@ public class Main {
         System.out.println("Priority Connection: " + priorityConn);
         System.out.println("Regular Connection: " + regularConn);
         System.out.println("urgentConn == anotherUrgentConn? " + (urgentConn == anotherUrgentConn));
+
+
+        System.out.println("\n--- Requirement 4 ---");
+        Phone myPhone1 = new PhoneBuilder("Client-007", "v1.5")
+                .addFeature(battery)
+                .addFeature(speaker)
+                .build();
+
+        Phone myPhone2 = new PhoneBuilder("Client-008", "v1.5")
+                .addFeature(battery)
+                .addFeature(compass)
+                .build();
+
+        System.out.println(myPhone1);
+        System.out.println(myPhone2);
+
     }
 }
